@@ -1,0 +1,14 @@
+// INITIALISE AN ARRAY OF OBJECTS
+// Method:
+T[] InitializeArray<T>(int length) where T : new()
+{
+    T[] array = new T[length];
+    for (int i = 0; i < length; ++i)
+    {
+        array[i] = new T();
+    }
+
+    return array;
+}
+// Usage:
+MyObject[] myObjects = InitializeArray<MyObject>(200);
